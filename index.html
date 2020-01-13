@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>My task board</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/timepicker.css">
+</head>
+<body>
+<div class="container ">
+	<div class="create-task">
+		<div class="row">
+			<div class="title">
+				<img src="img/title.png" alt="">
+			</div>
+			<div class="form">
+				<form action="" method="post" id="add-task">
+					<div class="background-paper">
+						<div>
+							<label for="title">
+								<input type="text" name="title" id="title" placeholder="Enter a Title"
+									   class="clear-form-input" autocomplete="off">
+							</label>
+						</div>
+						<div>
+							<label for="description">
+								<textarea id="description" name="description" rows="4" placeholder="Enter a Description"
+										  class="clear-form-input"></textarea>
+							</label>
+						</div>
+						<div>
+							<label for="time">
+								<input id="datetimepicker" type="text" name="time" class="clear-form-input"
+									   autocomplete="off" placeholder="Choose time">
+							</label>
+						</div>
+					</div>
+					<div class="submit">
+						<button type="submit">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container darker">
+	<div class="task-list">
+		<div class="full-row js-list">
+		</div>
+	</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/timepicker.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

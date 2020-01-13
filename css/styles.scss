@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 320px;
+}
+
+.backup {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  background: url("../img/bg2.jpg");
+
+  &.darker {
+	border-top: 3px solid #000000;
+	filter: brightness(56%);
+	-webkit-filter: brightness(56%);
+	flex: 1;
+  }
+}
+
+.row {
+  width: 1170px;
+}
+
+//Start header with creating form
+
+.create-task {
+  display: flex;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .title {
+	margin: 30px auto;
+	max-width: 700px;
+
+	img {
+	  width: 100%;
+	  height: auto;
+	}
+  }
+}
+
+
+.form {
+  margin: 30px auto;
+  max-width: 700px;
+
+  form {
+	width: 100%;
+  }
+
+  .background-paper {
+	background: url("../img/paper.png") repeat-y;
+	padding-left: 50px;
+	padding-right: 20px;
+	padding-top: 23px;
+	padding-bottom: 1px;
+  }
+
+  label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 20px;
+  }
+
+
+  ::-webkit-input-placeholder { /* Edge */
+	font-weight: bold;
+	color: #333;
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+	font-weight: bold;
+	color: #333;
+  }
+
+  ::placeholder {
+	font-weight: bold;
+	color: #333;
+  }
+
+  .clear-form-input {
+	background: transparent;
+	border: 0;
+	padding: 0;
+	display: block;
+	font-weight: bold;
+	color: #000;
+	width: 100%;
+	resize:none;
+	overflow: hidden;
+
+	&.has-error {
+	  color: #990000;
+
+	  &::-webkit-input-placeholder { /* Edge */
+		font-weight: bold;
+		color: #990000;
+	  }
+
+	  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		font-weight: bold;
+		color: #990000;
+	  }
+
+	  &::placeholder {
+		font-weight: bold;
+		color: #990000;
+	  }
+	}
+
+	&:focus {
+	  outline: none;
+	}
+  }
+
+  .submit {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+  }
+
+
+}
+
+//End header with creating form
+
+//Start task lists
+
+.task-list {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.full-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+  .item {
+	margin-top: 30px;
+	padding-top: 60px;
+	padding-right: 15px;
+	padding-left: 45px;
+	background: url('../img/note.png') no-repeat;
+	height: 327px;
+	display: flex;
+	-ms-flex: 0 0 249px;
+	flex: 0 0 249px;
+	max-width: 249px;
+	position: relative;
+	margin: {
+	  left: 20px;
+	  right: 20px;
+	};
+
+
+	.description {
+	  display: -webkit-box;
+	  -webkit-line-clamp: 10;
+	  -webkit-box-orient: vertical;
+	  overflow: hidden;
+	}
+
+	&:hover {
+	  .close {
+		display: block;
+	  }
+	}
+
+	.close {
+	  position: absolute;
+	  top: -5px;
+	  right: -5px;
+	  cursor: pointer;
+	  font-size: 16px;
+	  background: black;
+	  border-radius: 100%;
+	  width: 20px;
+	  color: #ffffff;
+	  display: none;
+	  height: 20px;
+	  text-align: center;
+	  padding-top: 2px;
+	}
+
+	.date {
+	  span {
+		font-weight: bold;
+	  }
+
+	  margin-bottom: 5px;
+	}
+
+	.item-content {
+	  display: flex;
+	  flex-direction: column;
+	  width: 100%;
+	}
+
+	.title {
+	  font-weight: bold;
+	  margin-bottom: 10px;
+	}
+  }
+
+}
+
+//End task lists
+
+@media all and (max-width: 608px) {
+
+  .full-row {
+	justify-content: center;
+  }
+}

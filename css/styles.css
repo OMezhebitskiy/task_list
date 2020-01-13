@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 320px;
+}
+
+.backup {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  background: url("../img/bg2.jpg");
+}
+.container.darker {
+  border-top: 3px solid #000000;
+  filter: brightness(56%);
+  -webkit-filter: brightness(56%);
+  flex: 1;
+}
+
+.row {
+  width: 1170px;
+}
+
+.create-task {
+  display: flex;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.create-task .title {
+  margin: 30px auto;
+  max-width: 700px;
+}
+.create-task .title img {
+  width: 100%;
+  height: auto;
+}
+
+.form {
+  margin: 30px auto;
+  max-width: 700px;
+}
+.form form {
+  width: 100%;
+}
+.form .background-paper {
+  background: url("../img/paper.png") repeat-y;
+  padding-left: 50px;
+  padding-right: 20px;
+  padding-top: 23px;
+  padding-bottom: 1px;
+}
+.form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.form ::-webkit-input-placeholder {
+  /* Edge */
+  font-weight: bold;
+  color: #333;
+}
+.form :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-weight: bold;
+  color: #333;
+}
+.form ::placeholder {
+  font-weight: bold;
+  color: #333;
+}
+.form .clear-form-input {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  display: block;
+  font-weight: bold;
+  color: #000;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+}
+.form .clear-form-input.has-error {
+  color: #990000;
+}
+.form .clear-form-input.has-error::-webkit-input-placeholder {
+  /* Edge */
+  font-weight: bold;
+  color: #990000;
+}
+.form .clear-form-input.has-error:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-weight: bold;
+  color: #990000;
+}
+.form .clear-form-input.has-error::placeholder {
+  font-weight: bold;
+  color: #990000;
+}
+.form .clear-form-input:focus {
+  outline: none;
+}
+.form .submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.task-list {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.full-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.full-row .item {
+  margin-top: 30px;
+  padding-top: 60px;
+  padding-right: 15px;
+  padding-left: 45px;
+  background: url("../img/note.png") no-repeat;
+  height: 327px;
+  display: flex;
+  -ms-flex: 0 0 249px;
+  flex: 0 0 249px;
+  max-width: 249px;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.full-row .item .description {
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.full-row .item:hover .close {
+  display: block;
+}
+.full-row .item .close {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  cursor: pointer;
+  font-size: 16px;
+  background: black;
+  border-radius: 100%;
+  width: 20px;
+  color: #ffffff;
+  display: none;
+  height: 20px;
+  text-align: center;
+  padding-top: 2px;
+}
+.full-row .item .date {
+  margin-bottom: 5px;
+}
+.full-row .item .date span {
+  font-weight: bold;
+}
+.full-row .item .item-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.full-row .item .title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@media all and (max-width: 608px) {
+  .full-row {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
